@@ -21,7 +21,7 @@ const Navbar = () => {
             window.scrollTo(0,0)
           }}
         >
-          <img src={logo} alt='tutitips logo' className='w-16 h-16 object-contain'/>
+          <img src={logo} alt='tutiitips logo' className='w-16 h-16 object-contain'/>
         </Link>
         {/* Navbar links for larger screens */}
         <ul className='hidden lg:flex flex-row gap-6 xl:gap-10'>

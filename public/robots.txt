@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lustrous-profiterole-5424fd.netlify.app/sitemap.xml
