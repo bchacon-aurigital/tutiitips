@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HelmetProvider } from 'react-helmet-async';
+import SchemaMarkup from './SchemaMarkup'; 
 import {
   Navbar,
   Hero,
@@ -19,6 +21,8 @@ import { blogPosts } from "./blogData.jsx";
 
 const App = () => {
   return (
+    <HelmetProvider>
+    <SchemaMarkup />
     <Router>
       <a
         href="https://api.whatsapp.com/send?phone=50687845969"
@@ -41,6 +45,7 @@ const App = () => {
         </Routes>
       </div>
     </Router>
+    </HelmetProvider>
   );
 };
 
