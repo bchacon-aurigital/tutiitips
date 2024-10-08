@@ -14,9 +14,9 @@ const Tulsi = () => {
             variants={slideIn("right", "tween", 0.3, 1)}
             className="relative z-20 top-16 md:static w-[90vw] md:w-[65%] text-verdeoscuro bg-pink-gr md:bg-secondary/30 md:top-36 drop-shadow-md p-4 md:p-6 md:rounded-md rounded"
           >
-            <h3 className="text-lg md:text-2xl 2xl:text-3xl font-semibold pb-2 md:pb-4 text-tertiary md:text-verdeoscuro">
+            <h2 className="text-lg md:text-2xl 2xl:text-3xl font-semibold pb-2 md:pb-4 text-tertiary md:text-verdeoscuro">
               Disfruto cuestionar mis creencias de hoy.
-            </h3>
+            </h2>
             <h3 className="text-lg md:text-2xl 2xl:text-3xl font-semibold pb-2 md:pb-4 text-tertiary md:text-primary">
               {" "}
               Pero cuando debatir me lleva a sentir que no estoy segura de

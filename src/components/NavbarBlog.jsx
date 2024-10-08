@@ -21,7 +21,7 @@ const NavbarBlog = () => {
             window.scrollTo(0,0)
           }}
         >
-          <img src={logo} alt='tutitips logo' className='w-16 h-16 object-contain'/>
+          <img src={logo} alt='tutiitips logo' className='w-16 h-16 object-contain'/>
         </Link>
         <ul className='hidden md:flex flex-row gap-6 lg:gap-10'>
           {navLinks.map((link) => (
