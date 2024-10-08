@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import logojpg from './logo.jpg';
+import logo2 from './logo.png';
 import menu from './menu.svg';
 import close from './close.svg';
 
@@ -55,7 +55,7 @@ import camina from './blog2/camina.png';
 
 export{
     logo,
-    logojpg,
+    logo2,
     menu,
     close,
     libroBanner,
