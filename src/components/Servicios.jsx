@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
+// Servicios.jsx
+import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-import {servicios} from '../constants';
-
+import { servicios } from '../constants';
 import { SectionWrapper } from '../hoc';
 
 const responsive = {
@@ -25,74 +25,89 @@ const responsive = {
   },
 };
 
-const CartaServicio = ({servicio}) =>{
-  return(
-    <div className='relative h-full rounded md:flex'>
-      <div className='relative bg-center rounded bog-no-repeat bg-cover h-96 w-full' 
-            style={{backgroundImage: `url('${servicio.img}')`}}/>
-      <div className='absolute rounded md:relative bottom-0 h-40 bg-serv-gr flex justify-center w-full items-end z-10 md:w-[50%] md:h-full md:bg-serv-gr2 md:backdrop-blur md:items-center'>
-        <h1 className='p-4 pb-6 text-center md:text-left text-primary md:text-2xl md:text-left md:p-8'>{servicio.title}</h1>
+const CartaServicio = ({ servicio }) => {
+  return (
+    <div className='relative h-full rounded-lg overflow-hidden shadow-lg'>
+      {/* Imagen ajustada con mayor altura */}
+      <div
+        className='relative bg-center bg-cover w-full h-72 transition-transform duration-500 hover:scale-105'
+        style={{ backgroundImage: `url('${servicio.img}')` }}
+      />
+      {/* Texto en la parte inferior con fondo semi-transparente */}
+      <div className='absolute bottom-0 w-full bg-serv-gr2 bg-opacity-60 flex justify-center items-center py-2'>
+        <h1 className='text-center text-verdeclaro text-lg font-semibold drop-shadow-md'>
+          {servicio.title}
+        </h1>
       </div>
     </div>
-  )
-}
+  );
+};
 
-
-const ServiciosSlider = () =>{
-
+const ServiciosSlider = () => {
   const customLeftArrow = (
-    <div className="absolute arrow-btn text-center px-3 py-1 cursor-pointer bg-serv-gr2 text-verdeclaro border-2 border-verdeclaro rounded-full text-xl"
-         style={{ 
-          bottom: `0.5rem`,
-          left: `0.5rem`,
-          }}
-      >&#10094;
-      {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-      </svg> */}
+    <div className="absolute left-4 top-1/2 transform -translate-y-1/2 flex justify-center items-center bg-serv-gr2 text-verdeclaro border-2 border-verdeclaro rounded-full h-10 w-10 cursor-pointer">
+      &#10094;
     </div>
   );
 
   const customRightArrow = (
-    <div className="absolute arrow-btn text-center px-3 py-1 cursor-pointer bg-serv-gr2 text-verdeclaro border-2 border-verdeclaro rounded-full text-xl"
-         style={{ 
-         bottom: `0.5rem`,
-         right: `0.5rem`,
-         }}
-      >&#10095;
-      {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-      </svg> */}
+    <div className="absolute right-4 top-1/2 transform -translate-y-1/2 flex justify-center items-center bg-serv-gr2 text-verdeclaro border-2 border-verdeclaro rounded-full h-10 w-10 cursor-pointer">
+      &#10095;
     </div>
   );
+
   return (
-    <div className="">
-        <Carousel 
-          infinite 
-          customLeftArrow={customLeftArrow} 
-          customRightArrow={customRightArrow} 
-          responsive={responsive} 
-          itemClass="rounded-md"
-        >
-          {servicios.map((servicio, index) => (
-            <CartaServicio key={index} servicio={servicio}/>
-          ))}
-          {/* <div>1</div> */}
-        </Carousel>
-      </div>
-  )
-}
+    <div className="relative">
+      <Carousel
+        infinite
+        customLeftArrow={customLeftArrow}
+        customRightArrow={customRightArrow}
+        responsive={responsive}
+        itemClass="rounded-md"
+      >
+        {servicios.map((servicio, index) => (
+          <CartaServicio key={index} servicio={servicio} />
+        ))}
+      </Carousel>
+    </div>
+  );
+};
+const ServiciosGrid = () => {
+  return (
+    <div className='flex flex-wrap justify-center gap-6'>
+      {servicios.map((servicio, index) => (
+        <div className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5'>
+          <CartaServicio key={index} servicio={servicio} />
+        </div>
+      ))}
+    </div>
+  );
+};
+
+
 
 const Servicios = () => {
   return (
     <div className='flex flex-col gap-16 md:mt-16 md:pb-16 justify-center items-center pb-8 lg:max-w-[80%] lg:mx-auto'>
       <h1 className='text-white uppercase text-3xl tracking-widest mt-8'>Servicios</h1>
-      <div className='border-white w-[80%] rounded h-96 text-center'>
-        <ServiciosSlider/>
+      
+      {/* Mostrar grid en pantallas grandes y slider en pantallas pequeñas */}
+      <div className='border-white w-[80%] rounded text-center'>
+        {/* Para pantallas grandes */}
+        <div className='hidden lg:block'>
+          <ServiciosGrid />
+        </div>
+        {/* Para pantallas pequeñas */}
+        <div className='lg:hidden'>
+          <ServiciosSlider />
+        </div>
       </div>
-        <a href='#agenda' className='relative bottom-0 py-2 px-6 w-max rounded-full bg-secondary hover:bg-verdeclaro text-verdeoscuro hover:text-secondary'>Agendar cita</a>
+
+      <a href='#agenda' className='relative bottom-0 py-2 px-6 w-max rounded-full bg-secondary hover:bg-verdeclaro text-verdeoscuro hover:text-secondary'>
+        Agendar cita
+      </a>
     </div>
-  )
-}
+  );
+};
 
 export default SectionWrapper(Servicios, 'servicios');
