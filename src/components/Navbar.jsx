@@ -24,7 +24,6 @@ const Navbar = () => {
           <img src={logo} alt='tutiitips logo' className='w-16 h-16 object-contain' />
         </Link>
 
-        {/* Enlaces de navegación para pantallas grandes */}
         <ul className='hidden lg:flex flex-row gap-6 xl:gap-10'>
           {navLinks.map((link) => (
             <li
@@ -47,7 +46,6 @@ const Navbar = () => {
           </a>
         </ul>
 
-        {/* Menú hamburguesa para pantallas pequeñas */}
         <div className='lg:hidden flex flex-1 justify-end items-center'>
           <img
             src={toggle ? close : menu}
