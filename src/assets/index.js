@@ -3,22 +3,22 @@ import logo2 from './logo.png';
 import menu from './menu.svg';
 import close from './close.svg';
 
-import libroBanner from './portada.png';
-import tulsi from './tulsi-img.png';
-import hero from './hero-img.png';
-import abril from './abril.png'
+import libroBanner from './portada.avif';
+import tulsi from './tulsi-img.avif';
+import hero from './hero-img.avif';
+import abril from './abril.avif'
 
-import arte1 from './arte-terapia/chicas-abrazo-drama.png';
-import arte2 from './arte-terapia/chica-brazos-cruz-nuca.png';
-import arte3 from './arte-terapia/pintura.jpg';
-import arte4 from './arte-terapia/danza.jpg';
-import arte5 from './arte-terapia/canto.jpg';
+import arte1 from './arte-terapia/chicas-abrazo-drama.avif';
+import arte2 from './arte-terapia/chica-brazos-cruz-nuca.avif';
+import arte3 from './arte-terapia/pintura.avif';
+import arte4 from './arte-terapia/danza.avif';
+import arte5 from './arte-terapia/canto.avif';
 
-import arte from './servicios/arte.png';
-import educacion from './servicios/educacion.png';
-import familia from './servicios/familia.png';
-import individual from './servicios/individual.png';
-import pareja from './servicios/pareja.png';
+import arte from './servicios/arte.avif';
+import educacion from './servicios/educacion.avif';
+import familia from './servicios/familia.avif';
+import individual from './servicios/individual.avif';
+import pareja from './servicios/pareja.avif';
 
 import quote from './quote.png';
 import instagram from './instagram.png';
@@ -26,31 +26,31 @@ import whatsapp from './whatsapp.png';
 import facebook from './facebook.png';
 import waze from './waze.png';
 
-import taller1 from './taller1.jpeg';
-import taller2 from './taller2.jpeg';
-import taller3 from './taller3.jpeg';
+import taller1 from './taller1.avif';
+import taller2 from './taller2.avif';
+import taller3 from './taller3.avif';
 
-import blogBg from './blog-bg.png'
+import blogBg from './blog-bg.avif'
 
-import BlogSectionBG from './BlogSecBg.png';
-import bedpaint from './blog1/bedpaint.png';
-import ilustrativa1 from './blog1/ilustrativa1.png';
-import ilustrativa2 from './blog1/ilustrativa2.png';
-import ilustrativa3 from './blog1/ilustrativa3.png';
-import manada from './blog1/manada.png';
-import manada2 from './blog1/manada2.png';
-import cama from './blog1/cama.png';
-import couple from './blog1/couple.png';
+import BlogSectionBG from './BlogSecBg.avif';
+import bedpaint from './blog1/bedpaint.avif';
+import ilustrativa1 from './blog1/ilustrativa1.avif';
+import ilustrativa2 from './blog1/ilustrativa2.avif';
+import ilustrativa3 from './blog1/ilustrativa3.avif';
+import manada from './blog1/manada.avif';
+import manada2 from './blog1/manada2.avif';
+import cama from './blog1/cama.avif';
+import couple from './blog1/couple.avif';
 
-import escultura from './blog2/escultura.png';
-import soyfuria from './blog2/soyfuria.png';
-import fontana from './blog2/fontana.png';
-import excavar from './blog2/excavar.png';
-import moai from './blog2/moai.png';
-import egipto from './blog2/egipto.png';
-import tortura from './blog2/tortura.png';
-import escultura2 from './blog2/escultura2.png';
-import camina from './blog2/camina.png';
+import escultura from './blog2/escultura.avif';
+import soyfuria from './blog2/soyfuria.avif';
+import fontana from './blog2/fontana.avif';
+import excavar from './blog2/excavar.avif';
+import moai from './blog2/moai.avif';
+import egipto from './blog2/egipto.avif';
+import tortura from './blog2/tortura.avif';
+import escultura2 from './blog2/escultura2.avif';
+import camina from './blog2/camina.avif';
 
 
 export{
