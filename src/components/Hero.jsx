@@ -18,7 +18,7 @@ const Hero = () => {
         </div>
         <div className="hidden lg:w-[50%] lg:flex justify-end">
           <div className="w-[90%] h-full bg-primary py-8 flex items-center">
-      
+            <img src={hero} alt="silla consultorio" className='-translate-x-12' />
           </div>
         </div>
       </div>
