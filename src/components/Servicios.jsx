@@ -1,4 +1,3 @@
-// Servicios.jsx
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -31,17 +30,21 @@ const CartaServicio = ({ servicio }) => {
       {/* Imagen ajustada con mayor altura */}
       <div
         className='relative bg-center bg-cover w-full h-72 transition-transform duration-500 hover:scale-105'
-        style={{ backgroundImage: `url('${servicio.img}')` }}
+        style={{ backgroundImage: `url(${servicio.img})` }}
       />
-      {/* Texto en la parte inferior con fondo semi-transparente */}
-      <div className='absolute bottom-0 w-full bg-serv-gr2 bg-opacity-60 flex justify-center items-center py-2'>
-        <h1 className='text-center text-verdeclaro text-lg font-semibold drop-shadow-md'>
+      {/* Fondo con gradiente blanco sutil */}
+      <div className='absolute bottom-0 w-full h-32 bg-gradient-to-t  from-white to-transparent'></div>
+      {/* Texto del servicio, separado del gradiente */}
+      <div className='absolute bottom-0 w-full flex justify-center items-center py-1'>
+        <h1 className='text-center text-verdeoscuro text-lg font-semibold drop-shadow-md'>
           {servicio.title}
         </h1>
       </div>
     </div>
   );
 };
+
+
 
 const ServiciosSlider = () => {
   const customLeftArrow = (
@@ -72,19 +75,18 @@ const ServiciosSlider = () => {
     </div>
   );
 };
+
 const ServiciosGrid = () => {
   return (
     <div className='flex flex-wrap justify-center gap-6'>
       {servicios.map((servicio, index) => (
-        <div className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5'>
-          <CartaServicio key={index} servicio={servicio} />
+        <div className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4' key={index}>
+          <CartaServicio servicio={servicio} />
         </div>
       ))}
     </div>
   );
 };
-
-
 
 const Servicios = () => {
   return (

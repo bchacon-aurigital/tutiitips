@@ -1,21 +1,14 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import {
-  Navbar,
-  Hero,
-  Tulsi,
-  Taller,
-  Servicios,
-  Agendar,
-  Testimonios,
-  FAQ,
-  Contacto,
-  Blog,
-  BlogThumbnail,
-  BlogList,
-  Layout,
-} from "./components";
+import { Navbar, Hero, Tulsi, Testimonios, FAQ, Contacto, BlogList, Layout } from "./components";
 import { whatsapp } from "./assets";
 import { blogPosts } from "./blogData.jsx";
+import React, { Suspense, lazy } from 'react';
+
+// Cargando los componentes de forma lazy
+const Taller = lazy(() => import('./components/Taller'));
+const Servicios = lazy(() => import('./components/Servicios'));
+const Agendar = lazy(() => import('./components/Agendar'));
+const Blog = lazy(() => import('./components/Blog'));
 
 const App = () => {
   return (
@@ -24,6 +17,7 @@ const App = () => {
         href="https://api.whatsapp.com/send?phone=50687845969"
         className="btn-wsp"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <i className="fa fa-whatsapp"></i>
       </a>
@@ -34,7 +28,9 @@ const App = () => {
             path="/blog/:id"
             element={
               <Layout>
-                <Blog />
+                <Suspense fallback={<div>Cargando...</div>}>
+                  <Blog />
+                </Suspense>
               </Layout>
             }
           />
@@ -50,18 +46,27 @@ const Home = () => (
       <Navbar />
       <Hero />
     </div>
+    
     <section className="h-auto bg-tul-serv-mobile md:bg-tul-serv bg-cover bg-center">
       <Tulsi />
-      {/* <Taller /> */}
-      <Servicios />
+      {/* Cargar Servicios de forma lazy */}
+      <Suspense fallback={<div>Cargando Servicios...</div>}>
+        <Servicios />
+      </Suspense>
+      {/* Puedes habilitar Taller si lo necesitas */}
+      {/* <Suspense fallback={<div>Cargando Taller...</div>}>
+        <Taller />
+      </Suspense> */}
     </section>
-    <Agendar />
-    {/* <div className="blog-section bg-blog-sec-bg mx-auto h-screen bg-cover">
-      {blogPosts.map((post) => (
-        <BlogThumbnail key={post.id} post={post} />
-      ))}
-    </div> */}
+    
+    {/* Cargar Agendar de forma lazy */}
+    <Suspense fallback={<div>Cargando...</div>}>
+      <Agendar />
+    </Suspense>
+    
+    {/* Puedes cargar BlogList o los thumbnails del blog */}
     <BlogList />
+    
     <Testimonios />
     <FAQ />
     <Contacto />
