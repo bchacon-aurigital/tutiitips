@@ -4,7 +4,6 @@ import { whatsapp } from "./assets";
 import { blogPosts } from "./blogData.jsx";
 import React, { Suspense, lazy } from 'react';
 
-// Cargando los componentes de forma lazy
 const Taller = lazy(() => import('./components/Taller'));
 const Servicios = lazy(() => import('./components/Servicios'));
 const Agendar = lazy(() => import('./components/Agendar'));
@@ -49,22 +48,18 @@ const Home = () => (
     
     <section className="h-auto bg-tul-serv-mobile md:bg-tul-serv bg-cover bg-center">
       <Tulsi />
-      {/* Cargar Servicios de forma lazy */}
       <Suspense fallback={<div>Cargando Servicios...</div>}>
         <Servicios />
       </Suspense>
-      {/* Puedes habilitar Taller si lo necesitas */}
       {/* <Suspense fallback={<div>Cargando Taller...</div>}>
         <Taller />
       </Suspense> */}
     </section>
     
-    {/* Cargar Agendar de forma lazy */}
     <Suspense fallback={<div>Cargando...</div>}>
       <Agendar />
     </Suspense>
     
-    {/* Puedes cargar BlogList o los thumbnails del blog */}
     <BlogList />
     
     <Testimonios />

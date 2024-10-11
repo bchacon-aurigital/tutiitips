@@ -14,11 +14,11 @@ const Contacto = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setMapLoaded(true);
-            observer.unobserve(entry.target); // Dejar de observar una vez cargado
+            observer.unobserve(entry.target); 
           }
         });
       },
-      { threshold: 0.1 } // Carga cuando el 10% del mapa sea visible
+      { threshold: 0.1 } 
     );
 
     if (mapRef.current) {

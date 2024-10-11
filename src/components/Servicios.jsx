@@ -27,14 +27,11 @@ const responsive = {
 const CartaServicio = ({ servicio }) => {
   return (
     <div className='relative h-full rounded-lg overflow-hidden shadow-lg'>
-      {/* Imagen ajustada con mayor altura */}
       <div
         className='relative bg-center bg-cover w-full h-72 transition-transform duration-500 hover:scale-105'
         style={{ backgroundImage: `url(${servicio.img})` }}
       />
-      {/* Fondo con gradiente blanco sutil */}
       <div className='absolute bottom-0 w-full h-32 bg-gradient-to-t  from-white to-transparent'></div>
-      {/* Texto del servicio, separado del gradiente */}
       <div className='absolute bottom-0 w-full flex justify-center items-center py-1'>
         <h1 className='text-center text-verdeoscuro text-lg font-semibold drop-shadow-md'>
           {servicio.title}
@@ -92,14 +89,10 @@ const Servicios = () => {
   return (
     <div className='flex flex-col gap-16 md:mt-16 md:pb-16 justify-center items-center pb-8 lg:max-w-[80%] lg:mx-auto'>
       <h1 className='text-white uppercase text-3xl tracking-widest mt-8'>Servicios</h1>
-      
-      {/* Mostrar grid en pantallas grandes y slider en pantallas pequeñas */}
       <div className='border-white w-[80%] rounded text-center'>
-        {/* Para pantallas grandes */}
         <div className='hidden lg:block'>
           <ServiciosGrid />
         </div>
-        {/* Para pantallas pequeñas */}
         <div className='lg:hidden'>
           <ServiciosSlider />
         </div>

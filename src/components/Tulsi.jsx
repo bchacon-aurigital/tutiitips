@@ -8,7 +8,6 @@ import { slideIn } from "../utils/motion";
 const Tulsi = () => {
   return (
     <div className="h-auto lg:max-w-[100%] items-center mx-auto md:mx-0 md:px-0">
-      {/* Versión de escritorio */}
       <div className="hidden md:block">
         <div className="md:flex md:flex-row-reverse mx-auto md:items-center md:self-center">
           <div className="min-h-[45vh] md:translate-x-32 md:translate-y-12 md:z-20 md:min-h-0 md:w-auto md:max-w-[65%] lg:max-w-[60%] md:-ml-16">
@@ -50,10 +49,8 @@ const Tulsi = () => {
         </div>
       </div>
 
-      {/* Versión móvil */}
       <div className="md:hidden">
         <div className="flex flex-col items-center justify-start">
-          {/* Imagen */}
           <div className="w-full">
             <img
               src={tulsi}
@@ -62,12 +59,10 @@ const Tulsi = () => {
               style={{ maxHeight: "70vh", objectPosition: "center top" }}
             />
           </div>
-          {/* Card de texto */}
           <motion.div
             variants={slideIn("up", "tween", 0.3, 1)}
             className="w-[90%] bg-white/80 p-6 rounded-md -mt-64 text-verdeoscuro"
           >
-            {/* Aplicamos '-mt-64' para subir el card 16 rem */}
             <h2 className="text-lg font-semibold pb-2">
               Disfruto cuestionar mis creencias de hoy.
             </h2>
