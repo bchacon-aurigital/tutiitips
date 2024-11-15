@@ -105,12 +105,14 @@ export const blogPosts = [
       </>
     ),
     thumbnail: bedpaint,
+    powrId: "6e7b62a3_1731678444"
   },
   {
     id: 2, // Asegúrate de que el ID es único
     title: "¿Soy un tajo abandonado o una obra en construcción?",
     summary: "Reflexiones sobre el crecimiento personal y la lucha interna en medio de tus propias crisis.",
-    thumbnail: escultura, // Asegúrate de proporcionar la ruta correcta a la imagen del thumbnail
+    thumbnail: escultura, 
+    powrId: "42a4ec97_1731677564",// Asegúrate de proporcionar la ruta correcta a la imagen del thumbnail
     content: (
       <>
         <p>
