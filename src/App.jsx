@@ -1,15 +1,26 @@
+import React, { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { Navbar, Hero, Tulsi, Testimonios, FAQ, Contacto, BlogList, Layout } from "./components";
 import { whatsapp } from "./assets";
 import { blogPosts } from "./blogData.jsx";
-import React, { Suspense, lazy } from 'react';
 
 const Taller = lazy(() => import('./components/Taller'));
 const Servicios = lazy(() => import('./components/Servicios'));
+const BookSection = lazy(() => import('./components/BookSection'));
+const TutiTipsSection = lazy(() => import('./components/TutiTipsSection'));
 const Agendar = lazy(() => import('./components/Agendar'));
 const Blog = lazy(() => import('./components/Blog'));
 
 const App = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // duración de la animación en milisegundos
+      once: true,     // si true, la animación se ejecuta solo una vez
+    });
+  }, []);
+
   return (
     <Router>
       <a
@@ -46,10 +57,16 @@ const Home = () => (
       <Hero />
     </div>
     
-    <section className="h-auto bg-tul-serv-mobile md:bg-tul-serv bg-cover bg-center">
+    <section className="h-auto bg-fixed bg-tul-serv-mobile md:bg-tul-serv bg-cover bg-center">
       <Tulsi />
       <Suspense fallback={<div>Cargando Servicios...</div>}>
         <Servicios />
+      </Suspense>
+      <Suspense fallback={<div>Cargando Servicios...</div>}>
+        <BookSection />
+      </Suspense>
+      <Suspense fallback={<div>Cargando Servicios...</div>}>
+        <TutiTipsSection/>
       </Suspense>
       {/* <Suspense fallback={<div>Cargando Taller...</div>}>
         <Taller />
@@ -57,12 +74,10 @@ const Home = () => (
     </section>
     
     <Suspense fallback={<div>Cargando...</div>}>
+      <Testimonios />
       <Agendar />
     </Suspense>
     
-    <BlogList />
-    
-    <Testimonios />
     <FAQ />
     <Contacto />
   </>

@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import logo from './tulsi-LOGO.png';
+import IconoTulsi from './IconoTulsi.svg';
 import logo2 from './logo.png';
+import logo3 from './Logo2.svg';
 import menu from './menu.svg';
 import close from './close.svg';
+import TulipanFondo from './TulipanFondo.svg';
 
 import libroBanner from './portada.avif';
 import tulsi from './tulsi-img.avif';
-import hero from './hero-img.avif';
+import BgHero from './BgHero.webm';
+import VideoBlogs from './VideoBlogs.webm';
+import Tulipan from './tulipan.svg';
+import Tulipan2 from './tulipan2.svg';
 import abril from './abril.avif'
+import Libro from './Libro.svg'
+import BgAgendar from './BgAgendar.avif';
 
-import arte1 from './arte-terapia/chicas-abrazo-drama.avif';
-import arte2 from './arte-terapia/chica-brazos-cruz-nuca.avif';
+import arte1 from './arte-terapia/teatro.avif';
+import arte2 from './arte-terapia/chicas-abrazo-drama.avif';
 import arte3 from './arte-terapia/pintura.avif';
 import arte4 from './arte-terapia/danza.avif';
 import arte5 from './arte-terapia/canto.avif';
 
 import arte from './servicios/arte.avif';
-import educacion from './servicios/educacion.avif';
+import talleres from './servicios/talleres.avif';
 import familia from './servicios/familia.avif';
 import individual from './servicios/individual.avif';
 import pareja from './servicios/pareja.avif';
+import Testimonio1 from './Testimonio1.avif';
 
 import quote from './quote.png';
 import instagram from './instagram.png';
@@ -55,22 +64,31 @@ import camina from './blog2/camina.avif';
 
 export{
     logo,
+    IconoTulsi,
     logo2,
+    logo3,
     menu,
     close,
     libroBanner,
+    Libro,
+    TulipanFondo,
+    VideoBlogs,
+    Testimonio1,
+    BgAgendar,
     taller1,
     taller2,
     taller3,
     tulsi,
-    hero,
+    Tulipan,
+    Tulipan2,
+    BgHero,
     arte1,
     arte2,
     arte3,
     arte4,
     arte5,
     arte,
-    educacion,
+    talleres,
     familia,
     individual,
     pareja,

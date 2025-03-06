@@ -2,14 +2,13 @@ import{
     logo,
     libroBanner,
     tulsi,
-    hero,
     arte1,
     arte2,
     arte3,
     arte4,
     arte5,
     arte,
-    educacion,
+    talleres,
     familia,
     individual,
     pareja,
@@ -33,12 +32,8 @@ export const navLinks = [
         title: 'Testimonios',
     },
     {
-        id:'preguntas',
+        id:'faq',
         title: 'Preguntas',
-    },
-    {
-        id:'contacto',
-        title:'Contacto',
     },
 ]
 
@@ -56,11 +51,11 @@ const servicios = [
         img: familia,
     },
     {
-        title: 'Talleres para Instituciones Educativas',
-        img: educacion,
+        title: 'Talleres Privados',
+        img: talleres,
     },
     {
-        title: 'Talleres de Arteterapia',
+        title: 'Arteterapia',
         img: arte,
     },
 ]

@@ -1,108 +1,100 @@
-import React from 'react';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-import { servicios } from '../constants';
-import { SectionWrapper } from '../hoc';
+import { servicios } from "../constants";
 
-const responsive = {
-  superLargeDesktop: {
-    breakpoint: { max: 4000, min: 1024 },
-    items: 1,
-  },
-  desktop: {
-    breakpoint: { max: 1024, min: 768 },
-    items: 1,
-  },
-  tablet: {
-    breakpoint: { max: 768, min: 640 },
-    items: 1,
-  },
-  mobile: {
-    breakpoint: { max: 640, min: 0 },
-    items: 1,
-  },
-};
-
-const CartaServicio = ({ servicio }) => {
+const ServiciosSection = () => {
   return (
-    <div className='relative h-full rounded-lg overflow-hidden shadow-lg'>
-      <div
-        className='relative bg-center bg-cover w-full h-72 transition-transform duration-500 hover:scale-105'
-        style={{ backgroundImage: `url(${servicio.img})` }}
-      />
-      <div className='absolute bottom-0 w-full h-32 bg-gradient-to-t  from-white to-transparent'></div>
-      <div className='absolute bottom-0 w-full flex justify-center items-center py-1'>
-        <h1 className='text-center text-verdeoscuro text-lg font-semibold drop-shadow-md'>
-          {servicio.title}
-        </h1>
-      </div>
-    </div>
-  );
-};
+    <section id="servicios" className="py-24 text-white font-sen">
+      <div className="w-full mx-auto">
 
+        <h2 className="text-5xl md:text-6xl lg:text-7xl font-rebellion text-center mb-12" data-aos="fade-down">
+          Encuentra el tipo de terapia ideal
+        </h2>
 
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="space-y-8 text-xl font-sen px-6 lg:px-0 lg:text-2xl leading-relaxed flex flex-col justify-end mx-auto xl:mx-0 xl:ml-auto max-w-xl" data-aos="fade-right">
+            <p className="font-sen">
+              Como psicóloga integrativa en Costa Rica, acompaño tu viaje interior hacia el equilibrio.
+              A través de la meditación, arteterapia y herramientas holísticas, creamos un espacio donde
+              cada historia encuentra su camino.
+            </p>
+            <p className="font-sen">
+              Mi enfoque conecta mente, cuerpo y espíritu, ayudándote a descubrir recursos internos para
+              superar tus desafíos emocionales. Te ofrezco acompañamiento genuino en San José o en sesiones
+              online, porque creo que mereces florecer en tu versión más auténtica.
+            </p>
+            <div className="w-full flex justify-center xl:justify-start">
+              <a
+                href="#agenda"
+                className="mt-5 w-72 relative inline-block py-2 px-4 rounded-full uppercase font-sen text-tertiary overflow-hidden bg-[#B7B325] group"
+              >
+                <div className="absolute inset-0 bg-verdeoscuro opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                <span className="relative z-10 font-medium xl:text-[20px] flex flex-row text-center justify-center items-center">Agenda una sesión </span>
+              </a>
+            </div>
+          </div>
 
-const ServiciosSlider = () => {
-  const customLeftArrow = (
-    <div className="absolute left-4 top-1/2 transform -translate-y-1/2 flex justify-center items-center bg-serv-gr2 text-verdeclaro border-2 border-verdeclaro rounded-full h-10 w-10 cursor-pointer">
-      &#10094;
-    </div>
-  );
+          <div className="relative w-full hidden xl:block" data-aos="fade-left">
+            <Swiper
+              modules={[Navigation, Pagination, Autoplay]}
+              spaceBetween={10}
+              slidesPerView={1.3}
+              centeredSlides={false}
+              navigation
+              pagination={{ clickable: true }}
+              autoplay={{ delay: 4000, disableOnInteraction: false }}
+              className="w-full rounded-lg shadow-lg"
+            >
+              {servicios.map((servicio, index) => (
+                <SwiperSlide key={index} className="relative">
+                  <div
+                    className="bg-center bg-cover w-full h-[80vh] rounded-lg shadow-lg"
+                    style={{ backgroundImage: `url(${servicio.img})` }}
+                  />
+                  <div className="absolute bottom-0 w-full h-28 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <h3 className="absolute bottom-6 left-6 text-white text-3xl md:text-5xl tracking-wide font-bold drop-shadow-md font-rebellion">
+                    {servicio.title}
+                  </h3>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
 
-  const customRightArrow = (
-    <div className="absolute right-4 top-1/2 transform -translate-y-1/2 flex justify-center items-center bg-serv-gr2 text-verdeclaro border-2 border-verdeclaro rounded-full h-10 w-10 cursor-pointer">
-      &#10095;
-    </div>
-  );
+          <div className="relative w-full block xl:hidden px-8">
+            <Swiper
+              modules={[Navigation, Pagination, Autoplay]}
+              spaceBetween={10}
+              slidesPerView={1}
+              centeredSlides={false}
+              navigation
+              pagination={{ clickable: true }}
+              autoplay={{ delay: 4000, disableOnInteraction: false }}
+              className="w-full rounded-lg shadow-lg"
+            >
+              {servicios.map((servicio, index) => (
+                <SwiperSlide key={index} className="relative">
+                  <div
+                    className="bg-center bg-cover w-full h-[80vh] rounded-lg shadow-lg"
+                    style={{ backgroundImage: `url(${servicio.img})` }}
+                  />
+                  <div className="absolute bottom-0 w-full h-28 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <h3 className="absolute bottom-6 left-3 w-full mb-2 text-white text-3xl tracking-wide font-bold drop-shadow-md font-rebellion">
+                    {servicio.title}
+                  </h3>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
 
-  return (
-    <div className="relative">
-      <Carousel
-        infinite
-        customLeftArrow={customLeftArrow}
-        customRightArrow={customRightArrow}
-        responsive={responsive}
-        itemClass="rounded-md"
-      >
-        {servicios.map((servicio, index) => (
-          <CartaServicio key={index} servicio={servicio} />
-        ))}
-      </Carousel>
-    </div>
-  );
-};
-
-const ServiciosGrid = () => {
-  return (
-    <div className='flex flex-wrap justify-center gap-6'>
-      {servicios.map((servicio, index) => (
-        <div className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4' key={index}>
-          <CartaServicio servicio={servicio} />
-        </div>
-      ))}
-    </div>
-  );
-};
-
-const Servicios = () => {
-  return (
-    <div className='flex flex-col gap-16 md:mt-16 md:pb-16 justify-center items-center pb-8 lg:max-w-[80%] lg:mx-auto'>
-      <h1 className='text-white uppercase text-3xl tracking-widest mt-8'>Servicios</h1>
-      <div className='border-white w-[80%] rounded text-center'>
-        <div className='hidden lg:block'>
-          <ServiciosGrid />
-        </div>
-        <div className='lg:hidden'>
-          <ServiciosSlider />
         </div>
       </div>
-
-      <a href='#agenda' className='relative bottom-0 py-2 px-6 w-max rounded-full bg-secondary hover:bg-verdeclaro text-verdeoscuro hover:text-secondary'>
-        Agendar cita
-      </a>
-    </div>
+    </section>
   );
 };
 
-export default SectionWrapper(Servicios, 'servicios');
+export default ServiciosSection;
