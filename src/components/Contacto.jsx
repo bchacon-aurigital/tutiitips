@@ -35,8 +35,8 @@ const Contacto = () => {
   }, []);
 
   return (
-    <div className='bg-tul-serv bg-cover bg-center text-tertiary py-12'>
-      <div className='max-w-7xl mx-auto px-4 flex flex-col lg:flex-row justify-center items-center text-center lg:text-start lg:justify-between gap-4 font-sen'>
+    <div className='bg-tul-serv bg-cover bg-center text-tertiary '>
+      <div className='max-w-7xl mx-auto px-4 flex flex-col lg:flex-row justify-center items-center text-center lg:text-start lg:justify-between gap-4 font-sen py-12'>
         <div className='col-span-1 flex lex-col'>
           <div className='flex items-center mb-4'>
             <img 
@@ -90,6 +90,23 @@ const Contacto = () => {
             </div>
           )}
         </div>
+      </div>
+
+      <div className="w-full h-5 bg-[#2A5757]">
+        <a
+          href="https://aurigital.com"
+          target="_blank"
+          className="flex justify-center mx-auto w-full"
+        >
+          <p className="text-white uppercase text-[8px] text-center p-1 hover:text-[#28C0F5] ">
+            Design and Development by :
+          </p>
+          <img
+            src="/isotipo.avif"
+            alt="Design and Development by aurigital"
+            className="h-[20px] w-[20px]"
+          />
+        </a>
       </div>
     </div>
   );
