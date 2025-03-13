@@ -13,7 +13,7 @@ const BookSection = () => {
       </div>
 
       <div className="h-full flex flex-col justify-center">
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-rebellion mb-6 md:mb-20 font text-center w-full" data-aos="fade-up">
+        <h1 className="text-5xl md:text-6xl py-3 lg:text-7xl font-rebellion mb-6 md:mb-20 font text-center w-full" data-aos="fade-up">
           Abril: Para mis adentros
         </h1>
 

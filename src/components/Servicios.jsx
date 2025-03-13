@@ -12,7 +12,7 @@ const ServiciosSection = () => {
     <section id="servicios" className="py-24 text-white font-sen">
       <div className="w-full mx-auto">
 
-        <h2 className="text-5xl md:text-6xl lg:text-7xl font-rebellion text-center mb-12" data-aos="fade-down">
+        <h2 className="text-5xl md:text-6xl py-3 lg:text-7xl font-rebellion text-center mb-12" data-aos="fade-down">
           Encuentra el tipo de terapia ideal
         </h2>
 

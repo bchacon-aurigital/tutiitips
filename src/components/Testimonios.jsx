@@ -34,7 +34,7 @@ const Testimonios = () => {
     <div>
       <section className="py-24 text-white font-sen">
         <div className="w-full mx-auto">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-rebellion text-center mb-12 text-[#024143]" data-aos="fade-down">
+          <h2 className="text-5xl md:text-6xl py-3 lg:text-7xl font-rebellion text-center mb-12 text-[#024143]" data-aos="fade-down">
             Testimonios y herramientas
           </h2>
 
