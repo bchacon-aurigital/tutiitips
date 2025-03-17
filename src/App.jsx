@@ -57,7 +57,7 @@ const Home = () => (
       <Hero />
     </div>
     
-    <section className="h-auto bg-fixed bg-tul-serv-mobile md:bg-tul-serv bg-cover bg-center">
+    <section className="h-auto md:bg-fixed bg-tul-serv-mobile bg-cover bg-center md:bg-tul-serv">
       <Tulsi />
       <Suspense fallback={<div>Cargando Servicios...</div>}>
         <Servicios />
