@@ -29,7 +29,7 @@ const ContactoBlog = () => {
               <p className=''>(+506) 8784-5969</p>
             </div>
             <div className='flex gap-4 mt-1'>
-              <a href="https://www.instagram.com/tutiitips/">
+              <a href="https://www.instagram.com/tulsi.psico/">
                 <img src={instagram} alt="instagram link" width={40} height={40} />
               </a>
               <a target='_blank' href="https://api.whatsapp.com/send?phone=50687845969&text=%C2%A1Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20para%20agendar%20una%20sesi%C3%B3n%20de%20psicolog%C3%ADa%20%F0%9F%99%8F%F0%9F%8F%BB%E2%9C%A8">

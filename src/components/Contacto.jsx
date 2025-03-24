@@ -60,14 +60,14 @@ const Contacto = () => {
         <div className='col-span-1'>
           <h2 className='text-xl font-semibold mb-4'>Contáctame</h2>
           <div className='space-y-2 mb-4 font-sen'>
-            <p className='font-sen text-xl '>tulsi@tutitips.com</p>
+            <p className='font-sen text-xl '>tulssdiaza@gmail.com</p>
             <p className='font-sen text-xl '>(506) 8784-5969</p>
           </div>
           <div className="w-56 flex justify-center space-x-3 bg-white/10 px-3 py-3 rounded-full border-2 border-white">
         <a href="https://www.facebook.com/tutiitips" className="text-white text-4xl hover:text-gray-300"><FaFacebookF /></a>
         <a href="https://api.whatsapp.com/send?phone=50687845969&text=%C2%A1Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20para%20agendar%20una%20sesi%C3%B3n%20de%20psicolog%C3%ADa%20%F0%9F%99%8F%F0%9F%8F%BB%E2%9C%A8" className="text-white text-4xl hover:text-gray-300"><FaWhatsapp /></a>
         <a href="https://www.instagram.com/tulsi.psico/" className="text-white text-4xl hover:text-gray-300"><FaInstagram /></a>
-        <a href="#" className="text-white text-4xl hover:text-gray-300"><FaSpotify /></a>
+        {/* <a href="#" className="text-white text-4xl hover:text-gray-300"><FaSpotify /></a> */}
       </div>
         </div>
 
