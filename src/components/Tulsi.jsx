@@ -27,7 +27,8 @@ const TulsiSection = () => {
               Disfruto cuestionar mis creencias de hoy, pero cuando debatir me lleva a sentir que no estoy segura de nada….
             </h2>
             <p className="mt-4 text-sm md:text-base leading-relaxed">
-              Recuerdo que estoy segura del amor, somos amor, merecemos amor y vivimos desde el amor. Por eso deseo servirte con amor en la búsqueda de tu verdad, abrazarte y acompañarte en medio de los momentos de oscuridad.{" "}
+            El amor es mi certeza. Somos amor, merecemos amor y estamos aquí para amar.
+            Desde ese amor, quiero servirte, abrazarte y acompañarte en la luz y la oscuridad. ‎ 
               <strong className="font-semibold">
                 En un mundo que nos enseña a reprimir, el dejarnos sentirlo todo es nuestra revolución.
               </strong>

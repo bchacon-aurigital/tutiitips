@@ -9,7 +9,7 @@ const TutiTipsSection = () => {
       style={{ backgroundImage: "url('/images/fondo-hojas.jpg')" }}
     >
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6">
 
           <div className="flex flex-col">
 
@@ -23,7 +23,7 @@ const TutiTipsSection = () => {
             </div>
           </div>
 
-          <div className="hidden xl:block relative group overflow-hidden rounded-lg w-full h-[635px]" data-aos="fade-left">
+          {/*<div className="hidden xl:block relative group overflow-hidden rounded-lg w-full h-[635px]" data-aos="fade-left">
             <video
               src={VideoBlogs}
               autoPlay
@@ -31,7 +31,7 @@ const TutiTipsSection = () => {
               muted
               className="w-full h-full object-cover"
             />
-          </div>
+          </div>*/}
 
         </div>
       </div>
