@@ -43,6 +43,20 @@ export default {
         "book-cover-mb": "url('/src/assets/portadasm.avif')",
         "blog-sec-bg": "url('/src/assets/BlogSecBg.avif')",
       },
+      animation: {
+        'pulse-slow': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      transitionProperty: {
+        'opacity': 'opacity',
+        'transform': 'transform',
+      },
+      transitionDuration: {
+        '500': '500ms',
+        '200': '200ms',
+      },
+      transitionTimingFunction: {
+        'ease-out': 'cubic-bezier(0, 0, 0.2, 1)',
+      },
     },
   },
   plugins: [],

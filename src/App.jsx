@@ -1,8 +1,9 @@
-import React, { useEffect, Suspense, lazy } from 'react';
+import React, { useEffect, Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Navbar, Hero } from "./components";
+import LoadingScreen from './components/LoadingScreen';
 
 // Componentes lazy con prefetch
 const Tulsi = lazy(() => import("./components/Tulsi"));
@@ -25,39 +26,52 @@ const LoadingSpinner = () => (
 );
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
       once: true,
-      offset: 100, // offset (en px) desde el punto de activación
-      delay: 0, // valores de 0 a 3000, con paso de 50ms
+      offset: 100,
+      delay: 0,
     });
   }, []);
 
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
+
   return (
     <Router>
-      <a
-        href="https://api.whatsapp.com/send?phone=50687845969"
-        className="btn-wsp"
-        target="_blank"
-        rel="noopener noreferrer"
+      <LoadingScreen onLoadingComplete={handleLoadingComplete} />
+      <div 
+        className={`transition-opacity duration-500 ${
+          isLoading ? 'opacity-0' : 'opacity-100'
+        }`}
       >
-        <i className="fa fa-whatsapp"></i>
-      </a>
-      <div className="relative z-0 overflow-x-hidden">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route
-            path="/blog/:id"
-            element={
-              <Layout>
-                <Suspense fallback={<LoadingSpinner />}>
-                  <Blog />
-                </Suspense>
-              </Layout>
-            }
-          />
-        </Routes>
+        <a
+          href="https://api.whatsapp.com/send?phone=50687845969"
+          className="btn-wsp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fa fa-whatsapp"></i>
+        </a>
+        <div className="relative z-0 overflow-x-hidden">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route
+              path="/blog/:id"
+              element={
+                <Layout>
+                  <Suspense fallback={<LoadingSpinner />}>
+                    <Blog />
+                  </Suspense>
+                </Layout>
+              }
+            />
+          </Routes>
+        </div>
       </div>
     </Router>
   );
