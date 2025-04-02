@@ -30,16 +30,16 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tulsi.calendarhit.com" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <!-- Cargar Google Fonts con display=swap para mejorar el rendimiento -->
+    <!-- Optimización de fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    
     <!-- Cargar Font Awesome de forma asíncrona -->
     <link
       rel="preload"
@@ -80,6 +80,7 @@
     <script
       src="https://static.elfsight.com/platform/platform.js"
       async
+      defer
     ></script>
   </body>
 </html>

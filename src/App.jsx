@@ -2,22 +2,35 @@ import React, { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Navbar, Hero, Tulsi, Testimonios, FAQ, Contacto, BlogList, Layout } from "./components";
-import { whatsapp } from "./assets";
-import { blogPosts } from "./blogData.jsx";
+import { Navbar, Hero } from "./components";
 
-const Taller = lazy(() => import('./components/Taller'));
-const Servicios = lazy(() => import('./components/Servicios'));
-const BookSection = lazy(() => import('./components/BookSection'));
-const TutiTipsSection = lazy(() => import('./components/TutiTipsSection'));
-const Agendar = lazy(() => import('./components/Agendar'));
-const Blog = lazy(() => import('./components/Blog'));
+// Componentes lazy con prefetch
+const Tulsi = lazy(() => import("./components/Tulsi"));
+const Testimonios = lazy(() => import("./components/Testimonios"));
+const FAQ = lazy(() => import("./components/FAQ"));
+const Contacto = lazy(() => import("./components/Contacto"));
+const Layout = lazy(() => import("./components/Layout"));
+const Taller = lazy(() => import(/* webpackPrefetch: true */ './components/Taller'));
+const Servicios = lazy(() => import(/* webpackPrefetch: true */ './components/Servicios'));
+const BookSection = lazy(() => import(/* webpackPrefetch: true */ './components/BookSection'));
+const TutiTipsSection = lazy(() => import(/* webpackPrefetch: true */ './components/TutiTipsSection'));
+const Agendar = lazy(() => import(/* webpackPrefetch: true */ './components/Agendar'));
+const Blog = lazy(() => import(/* webpackPrefetch: true */ './components/Blog'));
+
+// Componente de carga
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-[200px]">
+    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#B7B325]"></div>
+  </div>
+);
 
 const App = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // duración de la animación en milisegundos
-      once: true,     // si true, la animación se ejecuta solo una vez
+      duration: 1000,
+      once: true,
+      offset: 100, // offset (en px) desde el punto de activación
+      delay: 0, // valores de 0 a 3000, con paso de 50ms
     });
   }, []);
 
@@ -38,7 +51,7 @@ const App = () => {
             path="/blog/:id"
             element={
               <Layout>
-                <Suspense fallback={<div>Cargando...</div>}>
+                <Suspense fallback={<LoadingSpinner />}>
                   <Blog />
                 </Suspense>
               </Layout>
@@ -59,21 +72,21 @@ const Home = () => (
     
     <section className="h-auto md:bg-fixed bg-tul-serv-mobile bg-cover bg-center md:bg-tul-serv">
       <Tulsi />
-      <Suspense fallback={<div>Cargando Servicios...</div>}>
+      <Suspense fallback={<LoadingSpinner />}>
         <Servicios />
       </Suspense>
-      <Suspense fallback={<div>Cargando Servicios...</div>}>
+      <Suspense fallback={<LoadingSpinner />}>
         <BookSection />
       </Suspense>
-      <Suspense fallback={<div>Cargando Servicios...</div>}>
-        <TutiTipsSection/>
+      <Suspense fallback={<LoadingSpinner />}>
+        <TutiTipsSection />
       </Suspense>
-      {/* <Suspense fallback={<div>Cargando Taller...</div>}>
+      {/* <Suspense fallback={<LoadingSpinner />}>
         <Taller />
       </Suspense> */}
     </section>
     
-    <Suspense fallback={<div>Cargando...</div>}>
+    <Suspense fallback={<LoadingSpinner />}>
       <Testimonios />
       <Agendar />
     </Suspense>
