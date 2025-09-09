@@ -7,7 +7,10 @@ import close from './close.svg';
 import TulipanFondo from './TulipanFondo.svg';
 
 import libroBanner from './portada.avif';
-import tulsi from './tulsi-img.avif';
+import tulsi from './tulsi-img2.jpeg';
+import tulsi2 from './tulsi-img2.jpeg';
+import tulsi1 from './tulsi-img1.jpeg';
+import tulsi3 from './tulsi-img3.jpeg';
 import BgHero from './BgHero.webm';
 import VideoBlogs from './VideoBlogs.webm';
 import Tulipan from './tulipan.svg';
@@ -79,6 +82,9 @@ export{
     taller2,
     taller3,
     tulsi,
+    tulsi2,
+    tulsi1,
+    tulsi3,
     Tulipan,
     Tulipan2,
     BgHero,
