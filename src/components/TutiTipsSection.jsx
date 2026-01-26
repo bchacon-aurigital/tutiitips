@@ -25,16 +25,17 @@ const TutiTipsSection = () => {
               Tuti Tips
             </h2>
 
-            <div 
-              className="h-full" 
+            <div
+              className="min-h-[600px] w-full"
               data-aos="fade-right"
               role="region"
               aria-label="Contenido de Tuti Tips"
-            > 
-              <div 
-                className="elfsight-app-8efcb6e2-9108-4dc8-8b5a-8ec3ebfee2e4" 
+            >
+              <div
+                className="elfsight-app-8efcb6e2-9108-4dc8-8b5a-8ec3ebfee2e4 min-h-[500px] w-full"
                 data-elfsight-app-lazy
                 aria-label="Widget de Elfsight"
+                style={{ overflow: 'visible' }}
               />
             </div>
           </div>

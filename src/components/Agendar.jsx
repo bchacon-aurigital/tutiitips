@@ -13,17 +13,15 @@ const Agendar = () => {
         </div>
       </div>
 
-      <div className='w-full md:w-1/3'>
+      <div className='w-full md:w-1/3 min-h-[500px]'>
         <iframe
           src="https://app.simplymeet.me/tuti?is_widget=1&view=compact"
-          style={{
-            width: '100%',
-            height: 'calc(100vh - 100px)'
-          }}
-          className='md:h-[80vh]'
-          frameBorder="1"
-          scrolling="no">
-        </iframe>
+          title="Agenda una cita con Tulsi"
+          className='w-full h-[calc(100vh-100px)] md:h-[80vh] min-h-[500px] border border-gray-200'
+          style={{ overflow: 'auto' }}
+          loading="lazy"
+          allow="clipboard-write"
+        />
       </div>
     </section>
   );
