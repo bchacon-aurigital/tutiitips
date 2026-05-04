@@ -24,9 +24,10 @@ const BookSection = () => {
               Abril es desnudar mis sentimientos y entregárselos al mundo, Abril es morir y resucitar
               entre mis letras, Abril es florecer y marchitarme... Una y otra vez...
             </p>
-            <p className="font-sen text-[#B7B325] text-2xl mb-6 text-right">
+            <p className="font-sen text-white text-2xl mb-6 text-right">
               - Con amor, Tul.
             </p>
+            {/* Comprar: re-enable when back in stock
             <div className="flex justify-center">
               <a
                 href="#agenda"
@@ -37,6 +38,17 @@ const BookSection = () => {
                   Comprar Libro
                 </span>
               </a>
+            </div>
+            */}
+            <div className="flex flex-col items-center gap-4">
+              <div className="mt-5 w-72 py-2 px-4 rounded-full uppercase font-sen text-tertiary bg-gradient-to-r from-[#00745B] to-[#B7B325] cursor-default">
+                <span className="font-medium xl:text-[20px] flex justify-center items-center">
+                  Sold Out
+                </span>
+              </div>
+              <p className="max-w-sm text-sm font-sen text-white/70 text-center leading-relaxed">
+                Con mucho agradecimiento en mi corazón te cuento que Abril está agotado, habilitaremos la compra una vez tengamos más en stock.
+              </p>
             </div>
           </div>
         </div>

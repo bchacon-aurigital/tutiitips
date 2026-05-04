@@ -15,9 +15,9 @@ const Agendar = () => {
         </div>
       </div>
 
-      {/* Tablet landscape overlay */}
-      <div className='relative z-10 -mt-24 mx-auto w-[92%] max-w-7xl'>
-        <div className='rounded-[2rem] shadow-2xl overflow-hidden border-[10px] border-gray-800 bg-white aspect-[4/3]'>
+      {/* Device overlay: phone portrait on mobile, tablet landscape on desktop */}
+      <div className='relative z-10 -mt-24 mx-auto w-full lg:w-[92%] lg:max-w-7xl'>
+        <div className='rounded-[2rem] shadow-2xl overflow-hidden border-[10px] border-gray-800 bg-white aspect-[9/16] lg:aspect-[4/3]'>
           <iframe
             src="https://app.simplymeet.me/tuti?is_widget=1&view=compact"
             title="Agenda una cita con Tulsi"
