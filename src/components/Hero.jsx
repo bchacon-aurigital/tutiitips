@@ -71,7 +71,7 @@ const Hero = () => {
           <FaFacebookF />
         </a>
         <a 
-          href="https://api.whatsapp.com/send?phone=50687845969&text=%C2%A1Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20para%20agendar%20una%20sesi%C3%B3n%20de%20psicolog%C3%ADa%20%F0%9F%99%8F%F0%9F%8F%BB%E2%9C%A8" 
+          href="https://api.whatsapp.com/send?phone=50672801612&text=%C2%A1Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20para%20agendar%20una%20sesi%C3%B3n%20de%20psicolog%C3%ADa%20%F0%9F%99%8F%F0%9F%8F%BB%E2%9C%A8" 
           className="text-white text-4xl hover:text-gray-300 transition-colors duration-200"
           target="_blank"
           rel="noopener noreferrer"

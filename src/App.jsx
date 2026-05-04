@@ -50,7 +50,7 @@ const App = () => {
         }`}
       >
         <a
-          href="https://api.whatsapp.com/send?phone=50687845969"
+          href="https://api.whatsapp.com/send?phone=50672801612"
           className="btn-wsp"
           target="_blank"
           rel="noopener noreferrer"
