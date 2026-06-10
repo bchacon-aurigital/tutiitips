@@ -6,7 +6,6 @@ const TutiTipsSection = () => {
     <section
       id='blog'
       className="relative bg-cover bg-center bg-no-repeat text-white"
-      style={{ backgroundImage: "url('/images/fondo-hojas.jpg')" }}
       aria-label="Sección de Tuti Tips"
     >
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-16">
