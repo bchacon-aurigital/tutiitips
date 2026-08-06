@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tuti.calendarhit.com/sitemap.xml
+Sitemap: https://tulsi.calendarhit.com/sitemap.xml

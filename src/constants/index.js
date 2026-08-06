@@ -2,14 +2,13 @@ import{
     logo,
     libroBanner,
     tulsi,
-    hero,
     arte1,
     arte2,
     arte3,
     arte4,
     arte5,
     arte,
-    educacion,
+    talleres,
     familia,
     individual,
     pareja,
@@ -33,12 +32,8 @@ export const navLinks = [
         title: 'Testimonios',
     },
     {
-        id:'preguntas',
+        id:'faq',
         title: 'Preguntas',
-    },
-    {
-        id:'contacto',
-        title:'Contacto',
     },
 ]
 
@@ -56,11 +51,11 @@ const servicios = [
         img: familia,
     },
     {
-        title: 'Talleres para Instituciones Educativas',
-        img: educacion,
+        title: 'Talleres Privados',
+        img: talleres,
     },
     {
-        title: 'Talleres de Arteterapia',
+        title: 'Arteterapia',
         img: arte,
     },
 ]
@@ -98,9 +93,10 @@ const preguntas = [
     {
       label: "¿Cuál es tu especialidad en psicología?",
       points: [
-        "Soy Licenciada en Psicología con énfasis en atención clínica.",
-        "Cuento con más de 20 años de experiencia artística, por lo que abordo las sesiones con herramientas de arteterapia.",
-        "Además de diferentes elementos teórico/prácticos de enfoques como: el Cognitivo Conductual, Humanístico, Gestalt, Psicodinámico, Sistémico, Socio Cultural y de Desarrollo.",
+        "Licenciada en psicología clínica con más de 20 años de experiencia artística.",
+        "Arteterapia como recurso para explorar emociones y potenciar el autoconocimiento.",
+        "Integración de enfoques terapéuticos diversos: cognitivo-conductual, humanístico, gestalt, psicodinámico, sistémico, sociocultural y de desarrollo.",
+        "Integración de ciencia espiritualidad y arte para abordar el bienestar emocional, mental y físico de manera equilibrada.",
       ],
     },
     {

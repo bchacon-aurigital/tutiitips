@@ -13,15 +13,14 @@ const FAQ = () => {
   };
 
   return (
-    <div className=' container mx-auto my-20 text-primary'>
-      <h1 className='text-center mb-14 text-3xl px-4 tracking-wider'>¿Tienes alguna pregunta?</h1>
+    <div id='faq' className='container mx-auto my-20 text-primary font-sen'>
       <div className='mx-auto max-w-[768px]'>
         <Collapse defaultActiveKey={['1']} onChange={onChange}>
           {preguntas.map((pregunta, index) => (
-            <Panel header={pregunta.label} key={index} className='text-md'>
+            <Panel header={pregunta.label} key={index} className='text-xl font-semibold font-sen'>
               <ul className='list-disc ml-5'>
                 {pregunta.points.map((point, index) => (
-                  <li key={index} className='text-primary'>
+                  <li key={index} className='text-primary font-sen'>
                     {point}
                   </li>
                 ))}
@@ -29,9 +28,6 @@ const FAQ = () => {
             </Panel>
           ))}
         </Collapse>
-      </div>
-      <div className='mt-10 text-center'>
-        <a href='#agenda' className='bg-secondary border-2 border-primary text-primary hover:bg-verdeclaro hover:text-tertiary py-2 px-6 w-max rounded-full'>Agendar una cita</a>
       </div>
     </div>
   );

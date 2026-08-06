@@ -58,7 +58,7 @@ const NavbarBlog = () => {
             }}
           />
           <div
-            className={`fixed top-0 left-0 pt-24 pl-16 h-full w-full bg-verdeclaro z-40 text-tertiary
+            className={`fixed top-0 left-0 pt-24 pl-16 h-full w-full bg-[#EDE8D6] z-40 text-tertiary
               ${toggle ? 'translate-x-0' : 'translate-x-full'}
               overflow-hidden transition-transform ease-in-out duration-700`}
           >
